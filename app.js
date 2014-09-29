@@ -6,8 +6,6 @@ window.addEventListener('load', function () {
 var slider = new PageSlider($("#container"));
 $(window).on('hashchange', route);
 
-(function($){
-
 	var slider = new PageSlider($("#container"));
 	var spinner = $("#spinner");
 
@@ -19,8 +17,6 @@ $(window).on('hashchange', route);
 		 parent.history.back();
 		  }
 	});
-
-})(jQuery);
 
 function route(event) {
 var page,
