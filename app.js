@@ -23,7 +23,7 @@ function showMessage(message, title) {
 }
 
 function renderhomepage(){
-        slider.slidePage($('<a href="#page-1">home</a>'));
+        slider.slidePage($('<a href="/#page-1">home</a>'));
 }
 
 function rendercategorypage(pageid){
