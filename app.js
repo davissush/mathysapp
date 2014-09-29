@@ -23,22 +23,11 @@ function showMessage(message, title) {
 }
 
 function renderhomepage(){
-        $.ajax({
-                type: 'GET',
-                url: remotehost + '/mathys_api/get-main-categories',
-                jsonp: "callback",
-                dataType: "jsonp",
-                complete: function(){
-                        showMessage('Complete', 'home');
-                },
-                success: function(data){
-                        slider.slidePage($(data));
-                }
-        });
+        slider.slidePage($('<a href="#page-1">home</a>'));
 }
 
 function rendercategorypage(pageid){
-                slider.slidePage($('<a href="#">' + pageid + '</a>'));
+                slider.slidePage($('<a href="#">page-' + pageid + '</a>'));
 }
 
 // Basic page routing
