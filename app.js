@@ -28,7 +28,7 @@ var page,
                         //var remotehost = 'http://mathyscms.edith.techrus.co.nz'
                         var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
 
-                        alert(hash);
+                        $('.debug').html(hash);
 
                         if(!searchpage.trim()){
                                 spinner.hide();
