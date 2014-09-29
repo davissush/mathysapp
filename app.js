@@ -6,17 +6,18 @@ window.addEventListener('load', function () {
 var slider = new PageSlider($("#container"));
 $(window).on('hashchange', route);
 
-	var slider = new PageSlider($("#container"));
-	var spinner = $("#spinner");
+var slider = new PageSlider($("#container"));
+var spinner = $("#spinner");
 
-	spinner.hide();
+spinner.hide();
 
-	$('.goback').entwine({
-		 onclick: function(e){
-		 e.preventDefault();
-		 parent.history.back();
-		  }
-	});
+$('.goback').entwine({
+        onclick: function(e){
+	e.preventDefault();
+	parent.history.back();
+     }
+});
+
 
 function route(event) {
 var page,
@@ -43,7 +44,6 @@ var page,
                                         }
                                 });
                         } else {
-                                console.log(searchpage.substring(0,4));
                                 if(searchpage.substring(0,4) == 'page'){
                                         $pageid=searchpage.substring(5);
                                         spinner.hide();
