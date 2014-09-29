@@ -4,6 +4,9 @@ window.addEventListener('load', function () {
 
 var slider = new PageSlider($("#container"));
 var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
+var spinner = $("#spinner");
+
+spinner.hide();
 
 $(window).on('hashchange', route);
 
@@ -24,6 +27,7 @@ function renderhomepage(){
                 complete: function(){
                 },
                 success: function(data){
+                        spinner.hide();
                         slider.slidePage($(data));
                 }
         });
@@ -38,6 +42,22 @@ function rendercategorypage(pageid){
                         complete: function(){
                         },
                         success: function(data){
+                                spinner.hide();
+                                slider.slidePage($(data));
+                        }
+                });
+}
+
+function rendermediapage(pageid){
+                        $.ajax({
+                        type: 'GET',
+                        url: remotehost + '/mathys_api/get_media_page/?pageid='+pageid,
+                        jsonp: "callback",
+                        dataType: "jsonp",
+                        complete: function(){
+                        },
+                        success: function(data){
+                                spinner.hide();
                                 slider.slidePage($(data));
                         }
                 });
@@ -50,11 +70,17 @@ function route(event) {
         var searchpage = hash.substring(1);
         var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
 
+        spinner.hide();
+        spinner.show();
         if(!searchpage.trim()){
                 renderhomepage();
         } else {
                 pageid=searchpage.substring(5);
-                rendercategorypage(pageid);
+                if(searchpage.substring(0,4) == 'page'){
+                        rendercategorypage(pageid);
+                } else {
+                        rendermediapage(pageid);
+                }
         }
 }
 
