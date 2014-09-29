@@ -28,6 +28,8 @@ var page,
                         //var remotehost = 'http://mathyscms.edith.techrus.co.nz'
                         var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
 
+                        alert(hash);
+
                         if(!searchpage.trim()){
                                 spinner.hide();
                                 spinner.show();
