@@ -21,21 +21,7 @@ function route(event) {
 
         console.log('test');
 
-        if(!searchpage.trim()){
-                $.ajax({
-                        type: 'GET',
-                        url: remotehost + '/mathys_api/get-main-categories',
-                        jsonp: "callback",
-                        dataType: "jsonp",
-                        complete: function(){
-                        },
-                        success: function(data){
-                                slider.slidePage($(data));
-                        }
-                });
-        } else {
-                console.log('test');
-        }
+        slider.slidePage($('<div>Test</div>'));
 }
 
 route();
