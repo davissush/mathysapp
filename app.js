@@ -14,20 +14,33 @@ $('.goback').entwine({
         }
 });
 
-function showMessage(message, title) {
-        if (navigator.notification) {
-                navigator.notification.alert(message, null, title, 'OK');
-        } else {
-                alert(title ? (title + ": " + message) : message);
-        }
-}
 
 function renderhomepage(){
-        slider.slidePage($('<a href="/#page-1">home</a>'));
+        $.ajax({
+                type: 'GET',
+                url: remotehost + '/mathys_api/get-main-categories',
+                jsonp: "callback",
+                dataType: "jsonp",
+                complete: function(){
+                },
+                success: function(data){
+                        slider.slidePage($(data));
+                }
+        });
 }
 
 function rendercategorypage(pageid){
-                slider.slidePage($('<a href="#">page-' + pageid + '</a>'));
+                        $.ajax({
+                        type: 'GET',
+                        url: remotehost + '/mathys_api/get_subcategory_page/?pageid='+pageid,
+                        jsonp: "callback",
+                        dataType: "jsonp",
+                        complete: function(){
+                        },
+                        success: function(data){
+                                slider.slidePage($(data));
+                        }
+                });
 }
 
 // Basic page routing
