@@ -34,18 +34,7 @@ function route(event) {
                         }
                 });
         } else {
-                $pageid=searchpage.substring(5);
-                $.ajax({
-                        type: 'GET',
-                        url: remotehost + '/mathys_api/get_subcategory_page/?pageid='+$pageid,
-                        jsonp: "callback",
-                        dataType: "jsonp",
-                        complete: function(){
-                        },
-                        success: function(data){
-                                slider.slidePage($(data));
-                        }
-                });
+                console.log('test');
         }
 }
 
