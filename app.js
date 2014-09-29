@@ -19,6 +19,7 @@ function route(event) {
         var searchpage = hash.substring(1);
         var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
 
+        console.log('test');
 
         if(!searchpage.trim()){
                 $.ajax({
