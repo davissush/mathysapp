@@ -12,6 +12,35 @@ $('.goback').entwine({
         }
 });
 
+
+function renderhomepage(){
+        $.ajax({
+                type: 'GET',
+                url: remotehost + '/mathys_api/get-main-categories',
+                jsonp: "callback",
+                dataType: "jsonp",
+                complete: function(){
+                },
+                success: function(data){
+                        slider.slidePage($(data));
+                }
+        });
+}
+
+function rendercategorypage(pageid){
+                        $.ajax({
+                        type: 'GET',
+                        url: remotehost + '/mathys_api/get_subcategory_page/?pageid='+pageid,
+                        jsonp: "callback",
+                        dataType: "jsonp",
+                        complete: function(){
+                        },
+                        success: function(data){
+                                slider.slidePage($(data));
+                        }
+                });
+}
+
 // Basic page routing
 function route(event) {
         var hash = window.location.hash;
