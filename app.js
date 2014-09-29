@@ -14,8 +14,13 @@ $('.goback').entwine({
         }
 });
 
-
-
+function showMessage(message, title) {
+        if (navigator.notification) {
+                navigator.notification.alert(message, null, title, 'OK');
+        } else {
+                alert(title ? (title + ": " + message) : message);
+        }
+}
 
 function renderhomepage(){
         $.ajax({
@@ -24,6 +29,7 @@ function renderhomepage(){
                 jsonp: "callback",
                 dataType: "jsonp",
                 complete: function(){
+                        showMessage('Complete', 'home');
                 },
                 success: function(data){
                         slider.slidePage($(data));
@@ -38,6 +44,7 @@ function rendercategorypage(pageid){
                         jsonp: "callback",
                         dataType: "jsonp",
                         complete: function(){
+                                showMessage('Complete', 'subpage');
                         },
                         success: function(data){
                                 slider.slidePage($(data));
