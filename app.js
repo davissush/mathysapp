@@ -3,6 +3,8 @@ window.addEventListener('load', function () {
 }, false);
 
 var slider = new PageSlider($("#container"));
+var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
+
 $(window).on('hashchange', route);
 
 $('.goback').entwine({
@@ -11,6 +13,8 @@ $('.goback').entwine({
                 parent.history.back();
         }
 });
+
+
 
 
 function renderhomepage(){
