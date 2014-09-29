@@ -38,18 +38,7 @@ function renderhomepage(){
 }
 
 function rendercategorypage(pageid){
-                        $.ajax({
-                        type: 'GET',
-                        url: remotehost + '/mathys_api/get_subcategory_page/?pageid='+pageid,
-                        jsonp: "callback",
-                        dataType: "jsonp",
-                        complete: function(){
-                                showMessage('Complete', 'subpage');
-                        },
-                        success: function(data){
-                                slider.slidePage($(data));
-                        }
-                });
+                slider.slidePage($('<a href="#">' + pageid + '</a>'));
 }
 
 // Basic page routing
