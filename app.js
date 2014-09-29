@@ -22,8 +22,8 @@ function route(event) {
         if(!searchpage.trim()){
                 slider.slidePage($("<a href='#page-2'>goto next</a>"));
         } else {
-                $pageid=searchpage.substring(5);
-                slider.slidePage($("<a href='#'>goto next</a>"));
+                pageid=searchpage.substring(5);
+                slider.slidePage($("<a href='#'>" + pageid + "</a>"));
         }
 }
 
