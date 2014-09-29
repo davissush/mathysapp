@@ -18,6 +18,14 @@ $('.goback').entwine({
      }
 });
 
+function showMessage(message, title) {
+        if (navigator.notification) {
+                navigator.notification.alert(message, null, title, 'OK');
+        } else {
+                alert(title ? (title + ": " + message) : message);
+        }
+}
+
 
 function route(event) {
 var page,
@@ -29,6 +37,8 @@ var page,
                         var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
 
                         $('.debug').html(hash);
+
+                        showMessage(hash,'Top');
 
                         if(!searchpage.trim()){
                                 spinner.hide();
