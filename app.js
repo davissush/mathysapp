@@ -46,6 +46,7 @@ var page,
                                         }
                                 });
                         } else {
+                                window.alert(hash);
                                 if(searchpage.substring(0,4) == 'page'){
                                         $pageid=searchpage.substring(5);
                                         spinner.hide();
