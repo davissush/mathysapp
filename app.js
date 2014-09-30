@@ -193,7 +193,6 @@ route();
                                                 window.localStorage.setItem("isregistered", "true");
                                                 IsLoading = false;
 
-                                                spinner.hide();
                                                 renderhomepage();
                                         },
                                         error:function(xhr,status,error){
