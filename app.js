@@ -90,7 +90,7 @@ function route(event) {
         spinner.show();
         if(!searchpage.trim()){
 
-                window.localStorage.removeItem('isregistered');
+                //window.localStorage.removeItem('isregistered');
 
                 //console.log(window.localStorage.getItem("isregistered"));
 
