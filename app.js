@@ -2,6 +2,10 @@ window.addEventListener('load', function () {
         new FastClick(document.body);
 }, false);
 
+document.addEventListener('deviceready', function(){
+        window.plugins.orientationLock.lock("portrait");
+});
+
 var slider = new PageSlider($("#container"));
 var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
 //var remotehost = 'http://mathys.cms'
