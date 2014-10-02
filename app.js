@@ -79,6 +79,21 @@ function renderRegistrationForm(){
         });
 }
 
+function renderIntroPage(){
+        $.ajax({
+                type: 'GET',
+                url: remotehost + '/mathys_api/get_intro_page',
+                jsonp: "callback",
+                dataType: "jsonp",
+                complete: function(){
+                },
+                success: function(data){
+                        spinner.hide();
+                        slider.slidePage($(data));
+                }
+        });
+}
+
 
 // Basic page routing
 function route(event) {
@@ -97,7 +112,8 @@ function route(event) {
                 if(window.localStorage.getItem("isregistered")){
                         renderhomepage();
                 } else {
-                        renderRegistrationForm();
+                        renderIntroPage();
+                        //renderRegistrationForm();
                 }
 
 //                if(window.localStorage.getItem("isregistered")){
@@ -202,6 +218,16 @@ route();
                         }
 
                 });
+
+                $("#EnterApp").entwine({
+                        onclick: function(e){
+                                e.preventDefault();
+
+                                spinner.hide();
+                                spinner.show();
+                                renderRegistrationForm();
+                        }
+                })
         });
 
 })(jQuery);
