@@ -18,10 +18,14 @@
 # specific language governing permissions and limitations
 # under the License.
 #
+
+#
+# Copyright (c) 2014 Sush Mobile. All rights reserved.
+#
 -->
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.sushmobile.mathysandroid"
+        id        = "com.mathysmedical"
         version   = "1.0.0">
 
     <name>Mathys RM Surgeon App</name>
@@ -76,12 +80,6 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.6" />
     <gap:plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
-
-    <!-- Third party plugins -->
-    <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
-    <!--
-        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-    -->
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>100</string>
