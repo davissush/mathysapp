@@ -186,6 +186,11 @@ input[type=checkbox] {
 .bar .title {
   padding-top: 25px;
 }
+
+h1.title.tandc {
+	padding-top: 0;
+}
+
 .bar input[type=checkbox] {
   vertical-align: inherit;
   position: absolute;
