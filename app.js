@@ -3,8 +3,8 @@ window.addEventListener('load', function () {
 }, false);
 
 var slider = new PageSlider($("#container"));
-var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
-//var remotehost = 'http://mathys.cms'
+//var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
+var remotehost = 'http://mathys.cms'
 var spinner = $("#spinner");
 
 spinner.hide();
@@ -105,7 +105,7 @@ function route(event) {
         spinner.show();
         if(!searchpage.trim()){
 
-                //window.localStorage.removeItem('isregistered');
+                window.localStorage.removeItem('isregistered');
 
                 //console.log(window.localStorage.getItem("isregistered"));
 
