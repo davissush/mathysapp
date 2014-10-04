@@ -218,6 +218,42 @@ h1.title.tandc {
   background-position: top right;
 }
 
+.OuterTOCheck{
+	text-align: center;
+	line-height: 50px;
+	font-size: .95em;
+}
+
+.TOCCheck input[type=checkbox] {
+	vertical-align: inherit;
+	position: absolute;
+	top: 19px;
+	left: 5px;
+	display: none;
+}
+
+.TOCCheck input[type=checkbox] + label:before {
+	content: '.';
+	background-color: #FFFFFF;
+	background-image: url("../images/Icons/ic_tick2.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	display: block;
+	text-indent: -9999px;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 13px;
+}
+
+.no-ie9 .TOCCheck input[type=checkbox] + label:before {
+	display: none;
+}
+
+.TOCCheck input[type=checkbox]:checked + label:before {
+	background-position: top right;
+}
+
 .TOCCheck {
   width: 282px;
   margin: auto;
