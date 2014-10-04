@@ -236,6 +236,7 @@ route();
 
                                 var videofile = $(this).data("videouri");
 
+                                console.log(videofile);
                                 VideoPlayer.play(videofile);
                         }
                 })
