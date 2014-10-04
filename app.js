@@ -228,6 +228,17 @@ route();
                                 renderRegistrationForm();
                         }
                 })
+
+
+                $("#VideoPlay").entwine({
+                        onclick: function(e){
+                                e.preventDefault();
+
+                                var videofile = $(this).data("videouri");
+
+                                VideoPlayer.play(videofile);
+                        }
+                })
         });
 
 })(jQuery);
