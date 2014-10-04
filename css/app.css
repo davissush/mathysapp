@@ -285,3 +285,16 @@ h1.title.tandc {
 .Category .table-view a {
   color: #ec8316;
 }
+
+.VideoWrapper{
+	position: relative;
+}
+
+.VideoWrapper img{
+	width: 100%;
+}
+
+.VideoWrapper img.VideoOverlay{
+	position: absolute;
+	top:0;
+}
