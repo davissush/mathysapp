@@ -35,33 +35,33 @@ function renderhomepage(){
 }
 
 function rendercategorypage(pageid){
-                        $.ajax({
-                        type: 'GET',
-                        url: remotehost + '/mathys_api/get_subcategory_page/?pageid='+pageid,
-                        jsonp: "callback",
-                        dataType: "jsonp",
-                        complete: function(){
-                        },
-                        success: function(data){
-                                spinner.hide();
-                                slider.slidePage($(data));
-                        }
-                });
+        $.ajax({
+                type: 'GET',
+                url: remotehost + '/mathys_api/get_subcategory_page/?pageid='+pageid,
+                jsonp: "callback",
+                dataType: "jsonp",
+                complete: function(){
+                },
+                success: function(data){
+                        spinner.hide();
+                        slider.slidePage($(data));
+                }
+        });
 }
 
 function rendermediapage(pageid){
-                        $.ajax({
-                        type: 'GET',
-                        url: remotehost + '/mathys_api/get_media_page/?pageid='+pageid,
-                        jsonp: "callback",
-                        dataType: "jsonp",
-                        complete: function(){
-                        },
-                        success: function(data){
-                                spinner.hide();
-                                slider.slidePage($(data));
-                        }
-                });
+        $.ajax({
+                type: 'GET',
+                url: remotehost + '/mathys_api/get_media_page/?pageid='+pageid,
+                jsonp: "callback",
+                dataType: "jsonp",
+                complete: function(){
+                },
+                success: function(data){
+                        spinner.hide();
+                        slider.slidePage($(data));
+                }
+        });
 }
 
 function renderRegistrationForm(){
@@ -105,7 +105,7 @@ function route(event) {
         spinner.show();
         if(!searchpage.trim()){
 
-                window.localStorage.removeItem('isregistered');
+                //window.localStorage.removeItem('isregistered');
 
                 //console.log(window.localStorage.getItem("isregistered"));
 
@@ -184,7 +184,7 @@ route();
                                 self = this;
 
                                 if(IsLoading) return;
-                                        IsLoading = true;
+                                IsLoading = true;
 
                                 if($('#IAgree').prop('checked')){
                                 } else {
