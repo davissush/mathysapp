@@ -28,8 +28,13 @@ function renderhomepage(){
                 complete: function(){
                 },
                 success: function(data){
-                        spinner.hide();
-                        slider.slidePage($(data));
+                       if(data){
+                               spinner.hide();
+                               slider.slidePage($(data));
+                       } else {
+                               window.alert("That page doesn't exist anymore. Click a different page to continue.");
+                               spinner.hide();
+                       }
                 }
         });
 }
@@ -43,8 +48,16 @@ function rendercategorypage(pageid){
                 complete: function(){
                 },
                 success: function(data){
-                        spinner.hide();
-                        slider.slidePage($(data));
+                        if(data){
+                                spinner.hide();
+                                slider.slidePage($(data));
+                        } else {
+                                window.alert("That page doesn't exist anymore. Click a different page to continue.");
+                                spinner.hide();
+                        }
+                },
+                error:function(xhr,status,error){
+                        alert(error);
                 }
         });
 }
@@ -58,8 +71,16 @@ function rendermediapage(pageid){
                 complete: function(){
                 },
                 success: function(data){
-                        spinner.hide();
-                        slider.slidePage($(data));
+                        if(data){
+                                spinner.hide();
+                                slider.slidePage($(data));
+                        } else {
+                                window.alert("That page doesn't exist anymore. Click a different page to continue.");
+                                spinner.hide();
+                        }
+                },
+                error:function(xhr,status,error){
+                        alert(error);
                 }
         });
 }
@@ -73,8 +94,16 @@ function renderRegistrationForm(){
                 complete: function(){
                 },
                 success: function(data){
-                        spinner.hide();
-                        slider.slidePage($(data));
+                        if(data){
+                                spinner.hide();
+                                slider.slidePage($(data));
+                        } else {
+                                window.alert("That page doesn't exist anymore. Click a different page to continue.");
+                                spinner.hide();
+                        }
+                },
+                error:function(xhr,status,error){
+                        alert(error);
                 }
         });
 }
@@ -90,10 +119,12 @@ function renderIntroPage(){
                 success: function(data){
                         spinner.hide();
                         slider.slidePage($(data));
+                },
+                error:function(xhr,status,error){
+                        alert(error);
                 }
         });
 }
-
 
 // Basic page routing
 function route(event) {
@@ -107,21 +138,12 @@ function route(event) {
 
                 //window.localStorage.removeItem('isregistered');
 
-                //console.log(window.localStorage.getItem("isregistered"));
-
                 if(window.localStorage.getItem("isregistered")){
                         renderhomepage();
                 } else {
                         renderIntroPage();
-                        //renderRegistrationForm();
                 }
 
-//                if(window.localStorage.getItem("isregistered")){
-//
-//                } else {
-//                        renderRegistrationForm();
-//
-//                }
         } else {
                 pageid=searchpage.substring(5);
                 if(searchpage.substring(0,4) == 'page'){
@@ -137,7 +159,6 @@ route();
 (function($) {
 
         var IsLoading = false;
-
 
         $('mathys').entwine(function($){
 
@@ -227,7 +248,7 @@ route();
                                 spinner.show();
                                 renderRegistrationForm();
                         }
-                })
+                });
 
 
                 $("#VideoPlay").entwine({
@@ -239,7 +260,14 @@ route();
                                 console.log(videofile);
                                 VideoPlayer.play(videofile);
                         }
-                })
+                });
+
+                $(".ignore-link").entwine({
+                        onclick: function(e){
+                                e.preventDefault();
+                        }
+                });
+
         });
 
 })(jQuery);

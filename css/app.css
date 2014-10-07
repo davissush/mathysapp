@@ -322,6 +322,10 @@ h1.title.tandc {
 	color: #ec8316;
 }
 
+.Category .Right i{
+	display:block;
+}
+
 .VideoWrapper{
 	position: relative;
 }
