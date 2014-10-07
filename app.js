@@ -32,9 +32,23 @@ function renderhomepage(){
                                spinner.hide();
                                slider.slidePage($(data));
                        } else {
-                               window.alert("That page doesn't exist anymore. Click a different page to continue.");
-                               spinner.hide();
+                               renderhomepage2();
                        }
+                }
+        });
+}
+
+function renderhomepage2(){
+        $.ajax({
+                type: 'GET',
+                url: remotehost + '/mathys_api/get-main-categories',
+                jsonp: "callback",
+                dataType: "jsonp",
+                complete: function(){
+                },
+                success: function(data){
+                        spinner.hide();
+                        slider.slidePage($(data));
                 }
         });
 }
@@ -52,8 +66,7 @@ function rendercategorypage(pageid){
                                 spinner.hide();
                                 slider.slidePage($(data));
                         } else {
-                                window.alert("That page doesn't exist anymore. Click a different page to continue.");
-                                spinner.hide();
+                                renderhomepage2();
                         }
                 },
                 error:function(xhr,status,error){
@@ -75,8 +88,7 @@ function rendermediapage(pageid){
                                 spinner.hide();
                                 slider.slidePage($(data));
                         } else {
-                                window.alert("That page doesn't exist anymore. Click a different page to continue.");
-                                spinner.hide();
+                                renderhomepage2();
                         }
                 },
                 error:function(xhr,status,error){
@@ -98,7 +110,6 @@ function renderRegistrationForm(){
                                 spinner.hide();
                                 slider.slidePage($(data));
                         } else {
-                                window.alert("That page doesn't exist anymore. Click a different page to continue.");
                                 spinner.hide();
                         }
                 },
