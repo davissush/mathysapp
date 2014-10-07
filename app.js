@@ -278,7 +278,6 @@ route();
                                 e.preventDefault();
                         }
                 });
-
         });
 
 })(jQuery);
