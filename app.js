@@ -278,6 +278,13 @@ route();
                                 e.preventDefault();
                         }
                 });
+
+
+                $(".sharelink").entwine({
+                        onclick: function(e){
+                                e.preventDefault();
+                        }
+                });
         });
 
 })(jQuery);
