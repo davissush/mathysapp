@@ -210,13 +210,38 @@ route();
                         }
                 });
 
+
+
                 $("#SumbitRegForm").entwine({
                         onclick: function(e){
                                 e.preventDefault();
                                 self = this;
 
+                                var emailRegex = new RegExp('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}$');
+                                var emailInput = $("input[name='Email']").val();
+
                                 if(IsLoading) return;
                                 IsLoading = true;
+
+                                if($("input[name='Name']").val() == ''){
+                                        self.showAlert('Please enter name.', 'Message');
+                                        IsLoading = false;
+                                        return;
+                                }
+
+                                if(emailRegex.test(emailInput)){
+                                }else {
+                                        self.showAlert('Please enter a valid email.', 'Message');
+                                        IsLoading = false;
+                                        return;
+                                }
+
+                                if($("input[name='Institution']").val() == ''){
+                                        self.showAlert('Please enter Hospital/Institution.', 'Message');
+                                        IsLoading = false;
+                                        return;
+                                }
+
 
                                 if($('#IAgree').prop('checked')){
                                 } else {
