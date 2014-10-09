@@ -36,7 +36,7 @@
 }
 
 .lined-center {
-	padding-top: 5px;
+	padding-top: 10px;
 	color: #354791;
 	text-align: center;
 	font-size: .9em;
@@ -44,7 +44,7 @@
 }
 
 .lined-full {
-	padding-top: 4px;
+	padding-top: 9px;
 	color: #354791;
 	font-size: .9em;
 	line-height: 33px;
@@ -337,4 +337,8 @@ h1.title.tandc {
 .VideoWrapper img.VideoOverlay{
 	position: absolute;
 	top:0;
+}
+
+.bar .mheader-category a.icon:active{
+	color: #ec8316;
 }
