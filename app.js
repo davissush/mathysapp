@@ -311,6 +311,17 @@ route();
                                 e.preventDefault();
                         }
                 });
+
+                $('iframe').entwine({
+                        onadd: function(){
+                                this.find('a').html('test');
+                        }
+                })
+
+
+
         });
 
 })(jQuery);
+
+$('iframe').contents().find()
