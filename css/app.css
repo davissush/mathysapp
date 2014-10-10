@@ -76,7 +76,7 @@
 }
 
 .content.mbackground {
-	padding-top: 70px;
+	padding-top: 75px;
 	background-image: url("../images/Backgrounds/bg_640x1136.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -162,7 +162,7 @@ input[type=checkbox] {
 }
 
 .bar.mheader {
-	height: 70px;
+	height: 75px;
 	padding: 0;
 }
 .bar .mheader-category {
@@ -310,7 +310,7 @@ h1.title.tandc {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	padding: 0 10px;
+	padding: 18px 10px;
 	font-size: 1.5em;
 	color: white;
 }
