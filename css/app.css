@@ -185,6 +185,7 @@ input[type=checkbox] {
 }
 .bar .title {
 	padding-top: 25px;
+	margin:0;
 }
 
 h1.title.tandc {
@@ -341,4 +342,14 @@ h1.title.tandc {
 
 .bar .mheader-category a.icon:active{
 	color: #ec8316;
+}
+
+.LinkBlocker{
+	background: white;
+	display: block;
+	height: 73px;
+	bottom: 63px;
+	position: fixed;
+	width: 100%;
+	color: white;
 }
