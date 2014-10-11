@@ -148,7 +148,7 @@ function route(event) {
         spinner.show();
         if(!searchpage.trim()){
 
-                //window.localStorage.removeItem('isregistered');
+               //window.localStorage.removeItem('isregistered');
 
                 if(window.localStorage.getItem("isregistered")){
                         renderhomepage();
@@ -186,10 +186,10 @@ route();
 
                 $("input[type='text']").entwine({
                         onfocusin: function(){
-                                $('.bar-tab').hide();
+                                $('.bar-tab').css('position', 'inherit');
                         },
                         onfocusout: function(){
-                                $('.bar-tab').show();
+                                $('.bar-tab').css('position', 'fixed');
                         }
                 });
 
@@ -312,16 +312,18 @@ route();
                         }
                 });
 
-                $('iframe').entwine({
+                $('.iFrameWrapper').entwine({
                         onadd: function(){
-                                this.find('a').html('test');
+                               var iframe = document.createElement("iframe");
+                                iframe.id = 'iFrameID';
+                                iframe.src = this.data('iframeurl');
+                                this.html(iframe);
+
+                                $("#iFrameID").on("load", function(){
+                                        alert('sdfsf');
+                                });
                         }
                 })
-
-
-
         });
 
 })(jQuery);
-
-$('iframe').contents().find()

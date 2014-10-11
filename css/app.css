@@ -353,3 +353,12 @@ h1.title.tandc {
 	width: 100%;
 	color: #EBEBEB;
 }
+
+.iFrameWrapper iframe{
+	width: 100%;
+	height: 100%;
+}
+
+#page-footer{
+	display:none; !important;
+}
