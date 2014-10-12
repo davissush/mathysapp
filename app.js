@@ -320,7 +320,6 @@ route();
                                 this.html(iframe);
 
                                 $("#iFrameID").on("load", function(){
-                                        alert('sdfsf');
                                 });
                         }
                 })
