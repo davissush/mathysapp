@@ -186,10 +186,10 @@ route();
 
                 $("input[type='text']").entwine({
                         onfocusin: function(){
-                                $('.bar-tab').css('position', 'inherit');
+                                $('.bar-tab').hide();
                         },
                         onfocusout: function(){
-                                $('.bar-tab').css('position', 'fixed');
+                                $('.bar-tab').show();
                         }
                 });
 
@@ -314,13 +314,19 @@ route();
 
                 $('.iFrameWrapper').entwine({
                         onadd: function(){
-                               var iframe = document.createElement("iframe");
-                                iframe.id = 'iFrameID';
-                                iframe.src = this.data('iframeurl');
-                                this.html(iframe);
+                                var pdfsrc = this.data('iframeurl');
 
-                                $("#iFrameID").on("load", function(){
-                                });
+                                window.plugins.ChildBrowser.showWebPage(pdfsrc,
+                                        { showLocationBar: true });
+                        }
+                })
+
+                $('.iFrameWrapper .btn-outlined').entwine({
+                        onclick: function(){
+                                var pdfsrc = this.closest('.iFrameWrapper').data('iframeurl');
+
+                                window.plugins.ChildBrowser.showWebPage(pdfsrc,
+                                        { showLocationBar: true });
                         }
                 })
         });

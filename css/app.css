@@ -149,6 +149,7 @@ input[type=checkbox] {
 	margin-top: -142px;
 	left: 50%;
 	margin-left: -85px;
+	display:block;
 }
 
 .footer-logo-left {
@@ -262,6 +263,9 @@ h1.title.tandc {
 }
 .TOCCheck label {
 	cursor: pointer;
+	display: block;
+	line-height: 50px;
+	height: 50px;
 }
 
 .table-view-cell.mediafile {
@@ -357,6 +361,24 @@ h1.title.tandc {
 .iFrameWrapper iframe{
 	width: 100%;
 	height: 100%;
+
+}
+
+.iFrameWrapper {
+	text-align: center;
+}
+
+.iFrameWrapper h4{
+	margin-top: 30px;
+	color: #ec8316;
+}
+
+.iFrameWrapper button{
+	margin-top: 10px;
+}
+
+.iFrameWrapper p{
+	margin: 20px;
 }
 
 #page-footer{
