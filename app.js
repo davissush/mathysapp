@@ -316,8 +316,7 @@ route();
                         onadd: function(){
                                 var pdfsrc = this.data('iframeurl');
 
-                                window.plugins.ChildBrowser.showWebPage(pdfsrc,
-                                        { showLocationBar: true });
+                                var browser = window.open(pdfsrc, '_blank', 'location=no');
                         }
                 })
 
@@ -325,8 +324,7 @@ route();
                         onclick: function(){
                                 var pdfsrc = this.closest('.iFrameWrapper').data('iframeurl');
 
-                                window.plugins.ChildBrowser.showWebPage(pdfsrc,
-                                        { showLocationBar: true });
+                                var browser = window.open(pdfsrc, '_blank', 'location=no');
                         }
                 })
         });
