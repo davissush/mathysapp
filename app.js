@@ -184,14 +184,14 @@ route();
                         }
                 });
 
-                $("input[type='text']").entwine({
-                        onfocusin: function(){
-                                $('.bar-tab').hide();
-                        },
-                        onfocusout: function(){
-                                $('.bar-tab').show();
-                        }
-                });
+//                $("input[type='text']").entwine({
+//                        onfocusin: function(){
+//                                $('.bar-tab').hide();
+//                        },
+//                        onfocusout: function(){
+//                                $('.bar-tab').show();
+//                        }
+//                });
 
                 $("#TermsAndCondition").entwine({
                         onclick: function(e){

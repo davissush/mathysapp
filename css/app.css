@@ -384,3 +384,9 @@ h1.title.tandc {
 #page-footer{
 	display:none; !important;
 }
+
+@media(max-height: 450px) {
+	.bar-tab{
+		display: none;
+	}
+}
