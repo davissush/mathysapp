@@ -324,7 +324,7 @@ route();
                         onclick: function(){
                                 var pdfsrc = this.closest('.iFrameWrapper').data('iframeurl');
 
-                                var browser = window.open(pdfsrc, '_blank', 'location=no');
+                                var browser = window.open(pdfsrc, '_blank', 'location=yes');
                         }
                 })
         });
