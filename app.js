@@ -4,8 +4,8 @@ window.addEventListener('load', function () {
 
 var slider = new PageSlider($("#container"));
 //var remotehost = 'http://mathyscms.edith.techrus.co.nz/'
-var remotehost = 'http://mathys.cms'
-//var remotehost = 'http://rmsurgeon.com/';
+//var remotehost = 'http://mathys.cms'
+var remotehost = 'http://rmsurgeon.com/';
 var spinner = $("#spinner");
 
 spinner.hide();
@@ -148,7 +148,8 @@ function route(event) {
         spinner.show();
         if(!searchpage.trim()){
 
-               window.localStorage.removeItem('isregistered');
+                // Testing Block. Remove if testing
+                window.localStorage.removeItem('isregistered');
 
                 if(window.localStorage.getItem("isregistered")){
                         renderhomepage();

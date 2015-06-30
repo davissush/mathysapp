@@ -75,13 +75,27 @@
 	color: white;
 }
 
-.content.mbackground {
-	padding-top: 100px;
-	background-image: url("../images/Backgrounds/bg_640x1136.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
+body{
+    background-image: url("../images/Backgrounds/bg_640x1136.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
+
+.content.mbackground {
+    padding-top: 109px;
+    background-color: transparent;
+}
+
+/*.content.mbackground {*/
+	/*padding-top: 100px;*/
+	/*background-image: url("../images/Backgrounds/bg_640x1136.jpg");*/
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+	/*background-position: top;*/
+/*}*/
+
+
 .content .MainTitle {
 	padding-top: 40px;
 	font-weight: bold;
@@ -130,16 +144,39 @@ input[type=checkbox] {
 	vertical-align: inherit;
 }
 
+/*.header-logo {*/
+	/*width: 80px;*/
+/*}*/
+
 .header-logo {
-	width: 80px;
+    width: 251px;
+    margin-top: -10px;
 }
+
+.header-logo.registration {
+    width: 122px;
+    margin-top: 0;
+}
+
+
+/*.footer-logo {*/
+	/*width: 180px;*/
+/*}*/
 
 .footer-logo {
-	width: 180px;
+    width: 121px;
 }
 
+.footer-logo.intropage {
+    width: 205px;
+}
+
+/*.center-logo {*/
+	/*width: 173px;*/
+/*}*/
+
 .center-logo {
-	width: 173px;
+    width: 225px;
 }
 
 .center-div {
@@ -162,9 +199,14 @@ input[type=checkbox] {
 	padding-right: 10px;
 }
 
+/*.bar.mheader {*/
+	/*height: 100px;*/
+	/*padding: 0;*/
+/*}*/
+
 .bar.mheader {
-	height: 100px;
-	padding: 0;
+    height: 110px;
+    padding: 0;
 }
 
 .bar .mheader-category {
@@ -186,9 +228,14 @@ input[type=checkbox] {
 	border: none;
 	background-color: transparent;
 }
+/*.bar .title {*/
+	/*padding-top: 25px;*/
+	/*margin:0;*/
+/*}*/
+
 .bar .title {
-	padding-top: 25px;
-	margin:0;
+    padding-top: 10px;
+    margin:0;
 }
 
 h1.title.tandc {
@@ -292,7 +339,8 @@ h1.title.tandc {
 	display: block;
 }
 .table-view-cell.mediafile .Right {
-	padding: 5px 10px 0 90px;
+    padding: 10px 5px 0 83px;
+    line-height: 1.2em;
 }
 .table-view-cell.mediafile .Right i {
 	font-style: normal;
@@ -496,17 +544,26 @@ video {
 		padding-top: 75px;
 	}
 
-	.header-logo {
-		width: 55px;
-	}
+    .header-logo {
+        width: 170px;
+        margin-top: -10px;
+    }
 
+    .header-logo.registration {
+        width: 80px;
+        margin-top: 0;
+    }
 	.bar-tab{
 		height: 60px;
 	}
 
-	.footer-logo {
-		width: 120px;
-	}
+    .footer-logo {
+        width: 81px;
+    }
+
+    .footer-logo.intropage {
+        width: 155px;
+    }
 
 	.lined-center {
 		padding-top: 10px;
@@ -544,7 +601,7 @@ video {
 	}
 
 	.center-logo {
-		width: 173px;
+        width: 173px;
 	}
 
 	.no-line-top{
